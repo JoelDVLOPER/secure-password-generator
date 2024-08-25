@@ -2,10 +2,10 @@ import random
 
 def secure_password():
     pass_name = input('Insert your password key name.')
-    characters = [{'alphabet': 'abcdefghijklmnñopqrstuvwxyz'},
-                  {'uppercase alpha': 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'},
+    characters = [{'alphabet': 'abcdefghijklmnopqrstuvwxyz'},
+                  {'uppercase alpha': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'},
                   {'digits': '1234567890'},
-                  {'symbols': '!"#$%&/()=?¡*[]_-.;,:'}]
+                  {'symbols': '!"#$%&/()=?*[]_-.;,:'}]
     pass_len = random.randint(8, 18)
     counter = 0
     password = []
