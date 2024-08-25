@@ -1,6 +1,7 @@
 import random
 
 def secure_password():
+    pass_name = input('Insert your password key name.')
     characters = [{'alphabet': 'abcdefghijklmnñopqrstuvwxyz'},
                   {'uppercase alpha': 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'},
                   {'digits': '1234567890'},
@@ -16,6 +17,8 @@ def secure_password():
                 counter += 1
         if counter >= pass_len:
             break
-    print("".join(password))
+    pw = "".join(password)
+    with open("passwords.txt", "a") as myfile:
+        myfile.write(f'{pass_name}: {pw} \n')
 
 secure_password()
